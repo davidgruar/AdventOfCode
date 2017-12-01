@@ -9,12 +9,12 @@ let equalPairs pairs =
     |> List.filter(fun (a, b) -> a = b)
     |> List.map(fun (a, _) -> a)
 
-let sumOfEqualPairs (pairs: (int * int) list) =
+let sumOfEqualPairs pairs =
     pairs
     |> equalPairs
     |> List.sum
 
-let sumOfDigitsMatchingNext (xs: int list) =
+let sumOfDigitsMatchingNext xs =
     xs
     |> circularPairwise
     |> sumOfEqualPairs    
