@@ -198,3 +198,5 @@ FakesAssemblies/
 
 # Artifacts from merging
 *.orig
+
+.sessionCookie
