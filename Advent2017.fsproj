@@ -6,6 +6,7 @@
     <Compile Include="Inputs.fs" />
     <Compile Include="String.fs" />
     <Compile Include="SpiralStack.fs" />
+    <Compile Include="JumpList.fs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="nunit" Version="3.9.0" />
