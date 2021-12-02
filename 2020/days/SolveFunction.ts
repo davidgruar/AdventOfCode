@@ -1,0 +1,1 @@
+export type SolveFunction = (input: string) => [number, number];
