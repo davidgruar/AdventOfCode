@@ -1,9 +1,11 @@
 import fs from "fs";
 import util from "util";
 import { getInput } from "./getInput";
+import dotEnv from "dotenv";
 
 const readdir = util.promisify(fs.readdir);
 
+dotEnv.config();
 run();
 
 async function run() {

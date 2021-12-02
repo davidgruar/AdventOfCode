@@ -199,4 +199,4 @@ FakesAssemblies/
 # Artifacts from merging
 *.orig
 
-.env
+**/.env
