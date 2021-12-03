@@ -7,15 +7,15 @@ const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
 
 
-export async function getInput(day: string | number): Promise<string> {
-  const filepath = path.resolve("inputs", `${day}.txt`);
+export async function getInput(year: string | number, day: string | number): Promise<string> {
+  const filepath = path.resolve(`${year}/inputs`, `${day}.txt`);
   try {
     const input = await readFile(filepath, "utf8");
     return input;
   } catch {
-    const sessionToken = process.env["SESSION_TOKEN"];
+    const sessionToken = process.env["AOC_SESSION_TOKEN"];
     const response = await axios.get<string>(
-      `https://adventofcode.com/2020/day/${day}/input`,
+      `https://adventofcode.com/${year}/day/${day}/input`,
       {
         headers: { cookie: `session=${sessionToken}` },
       }

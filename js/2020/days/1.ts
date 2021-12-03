@@ -1,4 +1,4 @@
-import { SolveFunction } from './SolveFunction';
+import { SolveFunction } from '../../common/SolveFunction';
 
 const solve: SolveFunction = (input) => {
   const numbers = input.split("\n").map((n) => Number(n));

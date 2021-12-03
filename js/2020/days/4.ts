@@ -1,4 +1,4 @@
-import { SolveFunction } from "./SolveFunction";
+import { SolveFunction } from "../../common/SolveFunction";
 
 const requiredFields = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"] as const; //, cid
   type Field = (typeof requiredFields)[number];

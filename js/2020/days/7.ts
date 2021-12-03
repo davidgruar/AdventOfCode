@@ -1,4 +1,4 @@
-import { SolveFunction } from "./SolveFunction";
+import { SolveFunction } from "../../common/SolveFunction";
 
 type ChildBag = {
   colour: string;
