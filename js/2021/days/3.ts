@@ -1,4 +1,5 @@
 import { SolveFunction } from "../../common/SolveFunction";
+import { partition } from "../../utils/partition";
 
 const solve: SolveFunction = (input) => {
   const lines = input.split("\n");
@@ -6,22 +7,6 @@ const solve: SolveFunction = (input) => {
   const bitCount = lines[0].length;
 
   const range = (length: number) => [...Array(length).keys()];
-
-  const partition = <T>(
-    array: T[],
-    predicate: (item: T) => boolean
-  ): [T[], T[]] => {
-    const trueValues: T[] = [];
-    const falseValues: T[] = [];
-    array.forEach((item) => {
-      if (predicate(item)) {
-        trueValues.push(item);
-      } else {
-        falseValues.push(item);
-      }
-    });
-    return [trueValues, falseValues];
-  };
 
   const partitionByBit = (
     array: number[],
@@ -66,9 +51,8 @@ const solve: SolveFunction = (input) => {
       }
     }
     return filtered[0];
-  }
+  };
 
-  
   const oxygen = filterToSingle(false);
   const co2 = filterToSingle(true);
   const answer2 = oxygen * co2;
