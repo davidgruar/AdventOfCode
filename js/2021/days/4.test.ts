@@ -1,4 +1,4 @@
-const day4 = require("./4");
+const day4_2021 = require("./4");
 
 describe("day 4", () => {
   const sample = `7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1
@@ -22,12 +22,12 @@ describe("day 4", () => {
   2  0 12  3  7`;
 
   test("part 1", () => {
-    const [answer1] = day4(sample);
+    const [answer1] = day4_2021(sample);
     expect(answer1).toBe(4512);
   });
 
   test("part 2", () => {
-    const [, answer2] = day4(sample);
+    const [, answer2] = day4_2021(sample);
     expect(answer2).toBe(1924);
   });
 });
