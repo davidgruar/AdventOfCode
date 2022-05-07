@@ -200,3 +200,4 @@ FakesAssemblies/
 *.orig
 
 **/.env
+**/__pycache__
